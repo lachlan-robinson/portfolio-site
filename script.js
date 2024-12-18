@@ -6,3 +6,7 @@ $(".lorem-ipsum").text(ipsum);
 $("#projects-title").click(function () {
     $("#projects").slideToggle();
 });
+
+$("#about-title").click(function () {
+    $("#about").slideToggle();
+});
