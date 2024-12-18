@@ -89,8 +89,7 @@ a {
 .social-tag p {
     font-size: 1rem;
     color: black;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin: 0 0.5rem;
 }
 
 .fa {
@@ -98,67 +97,56 @@ a {
     color: white;
 }
 
-#github {
+.social-icon {
     transition: 0.3s;
+}
+
+.social-icon.github {
     box-shadow: 0px 0px 0px 0.2rem #212121 inset;
 }
 
-#github:hover {
-    transition: 0.3s;
+.social-icon.github:hover {
     box-shadow: 0px 0px 0px 0.2rem #212121 inset,
         0.2rem 0.2rem 0.2rem rgb(163, 163, 163);
 }
 
-#github-inner {
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 1.25rem;
-    background-color: #212121;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#linkedin {
-    transition: 0.3s;
+.social-icon.linkedin {
     box-shadow: 0px 0px 0px 0.2rem #0077b5 inset;
 }
 
-#linkedin:hover {
-    transition: 0.3s;
+.social-icon.linkedin:hover {
     box-shadow: 0px 0px 0px 0.2rem #0077b5 inset,
         0.2rem 0.2rem 0.2rem rgb(163, 163, 163);
 }
 
-#linkedin-inner {
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 1.25rem;
-    background-color: #0077b5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#instagram {
-    transition: 0.3s;
+.social-icon.instagram {
     box-shadow: 0px 0px 0px 0.2rem #d62976 inset;
 }
 
-#instagram:hover {
-    transition: 0.3s;
+.social-icon.instagram:hover {
     box-shadow: 0px 0px 0px 0.2rem #d62976 inset,
         0.2rem 0.2rem 0.2rem rgb(163, 163, 163);
 }
 
-#instagram-inner {
+.icon-inner {
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 1.25rem;
-    background-image: linear-gradient(to right, #fa7e1e, #d62976);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#github-inner {
+    background-color: #212121;
+}
+
+#linkedin-inner {
+    background-color: #0077b5;
+}
+
+#instagram-inner {
+    background-image: linear-gradient(to right, #fa7e1e, #d62976);
 }
 
 #projects {
