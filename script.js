@@ -10,3 +10,12 @@ $("#projects-title").click(function () {
 $("#about-title").click(function () {
     $("#about").slideToggle();
 });
+
+$("#contact-title").click(function () {
+    $("#contact").slideToggle();
+});
+
+$("#footer").click(function () {
+    $("html,body").animate({ scrollTop: 0 }, "slow");
+    return false;
+});
