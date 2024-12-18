@@ -18,6 +18,10 @@ h1 {
     margin: 0;
 }
 
+.top {
+    margin-top: 2rem;
+}
+
 h2 {
     font-size: 5rem;
     font-family: "Roboto", serif;
@@ -57,7 +61,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2rem;
 }
 
 .container {
