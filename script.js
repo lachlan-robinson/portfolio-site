@@ -3,19 +3,22 @@ var ipsum =
 
 $(".lorem-ipsum").text(ipsum);
 
-$("#projects-title").click(function () {
-    $("#projects").slideToggle();
-});
-
-$("#about-title").click(function () {
-    $("#about").slideToggle();
-});
-
-$("#contact-title").click(function () {
-    $("#contact").slideToggle();
-});
-
 $("#footer").click(function () {
     $("html,body").animate({ scrollTop: 0 }, "slow");
+    return false;
+});
+
+$("#projects-btn").click(function () {
+    $("html,body").animate({ scrollTop: $("#projects-target").offset().top }, "slow");
+    return false;
+});
+
+$("#about-btn").click(function () {
+    $("html,body").animate({ scrollTop: $("#about-target").offset().top }, "slow");
+    return false;
+});
+
+$("#contact-btn").click(function () {
+    $("html,body").animate({ scrollTop: $("#contact-target").offset().top }, "slow");
     return false;
 });
