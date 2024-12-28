@@ -15,6 +15,15 @@
                     fontFamily: {
                         roboto: ["Roboto", "sans-serif"],
                     },
+                    animation: {
+                        wiggle: "wiggle 0.8s ease-in-out infinite",
+                    },
+                    keyframes: {
+                        wiggle: {
+                            "0%, 100%": { transform: "rotate(-5deg)" },
+                            "50%": { transform: "rotate(5deg)" },
+                        },
+                    },
                 },
             };
         </script>
@@ -35,11 +44,16 @@
         </div>
         <!-- Hero Intro -->
         <div class="flex flex-col items-center justify-center h-screen">
-            <div>
+            <div class="">
                 <h1 class="text-9xl font-bold text-center">LACHLAN</h1>
                 <h1 class="text-9xl font-bold text-center">ROBINSON</h1>
             </div>
             <h3 class="text-7xl">Web Developer</h3>
+            <div class="flex gap-2">
+                <p class="animate-wiggle">👋</p>
+                <p class="text-gray-300">Hi, I'm Lachlan. An up and coming front-end web developer.</p>
+            </div>
+
             <!-- Tags -->
             <div class="grid grid-rows-3 lg:grid-cols-3 gap-2 mt-8 w-4/12 items-center justify-center">
                 <a href="https://github.com/lachlan-robinson" target="_blank">
@@ -63,34 +77,85 @@
                     </div>
                 </a>
             </div>
-            <img src="./img/icons/downarrow.svg" class="w-10 mt-32 animate-bounce" />
             <!-- Down Arrow -->
+        </div>
+        <div class="flex justify-center items-center h-20 absolute bottom-4 w-full">
+            <img src="./img/icons/downarrow.svg" class="w-10 mt-8 animate-bounce" />
         </div>
 
         <!-- Projects -->
-        <div class="h-screen" id="projects-target">
-            <h2 id="projects-title">Projects</h2>
-            <hr />
-            <div id="projects">
-                <a href="https://github.com/lachlan-robinson/portfolio-site" target="_blank">
-                    <div class="project-card project-1">
-                        <h3>Portfolio Site</h3>
-                        <p>The website you're interacting with now!</p>
-                        <div class="project-tech">
-                            <div class="tech-tag html">HTML</div>
-                            <div class="tech-tag css">CSS</div>
-                            <div class="tech-tag jquery">JQuery</div>
+        <div class="min-h-screen" id="projects-target">
+            <h2 class="text-9xl font-bold ml-4">PROJECTS</h2>
+            <a href="https://github.com/lachlan-robinson/portfolio-site" target="_blank">
+                <div class="flex flex-col items-center justify-center p-4">
+                    <!-- Projects Container -->
+                    <div class="w-10/12 bg-neutral-100 p-4 m-4 rounded-lg shadow-lg transition-all hover:bg-neutral-200 grid grid-cols-3 auto-rows-min cursor-pointer">
+                        <img src="./img/mockups/Macbook_Air_M2_Mockup_4.png" class="rounded-lg" />
+                        <div class="p-4 col-span-2">
+                            <h3 class="text-3xl text-neutral-900">Personal Portfolio Website</h3>
+                            <p class="mt-2 text-neutral-900">The website you're interacting with now! This website is a portfolio that demonstrates my web design and front-end focussed implementations of html, css, js and jqeury.</p>
                         </div>
-                        <!-- <img src="./img/project1.jpg" />  -->
+                        <div class="flex flex-row items-center justify-center gap-8 col-span-3">
+                            <div class="relative p-2 border-solid border-2 border-neutral-900 rounded-full text-neutral-900 min-w-24 max-w-32 text-center">HTML</div>
+                            <div class="relative p-2 border-solid border-2 border-neutral-900 rounded-full text-neutral-900 min-w-24 max-w-32 text-center">CSS</div>
+                            <div class="relative p-2 border-solid border-2 border-neutral-900 rounded-full text-neutral-900 min-w-24 max-w-32 text-center">JQUERY</div>
+                            <div class="relative p-2 border-solid border-2 border-neutral-900 rounded-full text-neutral-900 min-w-24 max-w-32 text-center">TAILWIND</div>
+                        </div>
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
 
         <!-- About Me -->
-        <div class="h-screen" id="about-target">
-            <h2 id="about-title">About Me</h2>
-            <hr />
+        <div class="min-h-screen" id="about-target">
+            <h2 class="text-9xl font-bold ml-4">ABOUT ME</h2>
+            <!--Technologies-->
+            <div class="flex flex-col items-center justify-center w-full">
+                <div class="grid grid-cols-4 gap-4 p-4 m-4 w-10/12">
+                    <div class="grid grid-cols-1 grid-rows-2 place-items-center bg-neutral-900 shadow-lg rounded-lg p-4 cursor-pointer hover:bg-neutral-800">
+                        <div class="w-16 h-16 flex justify-center items-center">
+                            <img src="./img/icons/html.svg" class="w-16" />
+                        </div>
+                        <p class="text-xl font-bold">HTML</p>
+                    </div>
+                    <div class="grid grid-cols-1 grid-rows-2 place-items-center bg-neutral-900 shadow-lg rounded-lg p-4 cursor-pointer hover:bg-neutral-800">
+                        <div class="w-16 h-16 flex justify-center items-center">
+                            <img src="./img/icons/css.png" class="w-16" />
+                        </div>
+                        <p class="text-xl font-bold">CSS</p>
+                    </div>
+                    <div class="grid grid-cols-1 grid-rows-2 place-items-center bg-neutral-900 shadow-lg rounded-lg p-4 cursor-pointer hover:bg-neutral-800">
+                        <div class="w-16 h-16 flex justify-center items-center">
+                            <img src="./img/icons/js.svg" class="w-16" />
+                        </div>
+                        <p class="text-xl font-bold">JavaScript</p>
+                    </div>
+                    <div class="grid grid-cols-1 grid-rows-2 place-items-center bg-neutral-900 shadow-lg rounded-lg p-4 cursor-pointer hover:bg-neutral-800">
+                        <div class="w-16 h-16 flex justify-center items-center">
+                            <img src="./img/icons/tailwind.png" class="w-16" />
+                        </div>
+                        <p class="text-xl font-bold">Tailwind CSS</p>
+                    </div>
+                    <div class="grid grid-cols-1 grid-rows-2 place-items-center bg-neutral-900 shadow-lg rounded-lg p-4 cursor-pointer hover:bg-neutral-800">
+                        <div class="w-16 h-16 flex justify-center items-center">
+                            <img src="./img/icons/node.svg" class="w-16" />
+                        </div>
+                        <p class="text-xl font-bold">Node.JS</p>
+                    </div>
+                    <div class="grid grid-cols-1 grid-rows-2 place-items-center bg-neutral-900 shadow-lg rounded-lg p-4 cursor-pointer hover:bg-neutral-800">
+                        <div class="w-16 h-16 flex justify-center items-center">
+                            <img src="./img/icons/git.svg" class="w-16" />
+                        </div>
+                        <p class="text-xl font-bold">Git</p>
+                    </div>
+                    <div class="grid grid-cols-1 grid-rows-2 place-items-center bg-neutral-900 shadow-lg rounded-lg p-4 cursor-pointer hover:bg-neutral-800">
+                        <div class="w-16 h-16 flex justify-center items-center">
+                            <img src="./img/icons/react.svg" class="w-16" />
+                        </div>
+                        <p class="text-xl font-bold">React</p>
+                    </div>
+            </div>
+
             <p class="lorem-ipsum" id="about"></p>
         </div>
 
