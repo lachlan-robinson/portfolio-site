@@ -1,56 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link href="./roboto.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
         <link href="style.css" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
+    <body class="bg-emerald-800 text-white">
+        <div grid-cols-3 class="flex justify-between items-center p-4">
+            <!--Navbar-->
+            <div>
+                <p class="text-center transition-all h-5 w-36 hover:font-bold hover:cursor-pointer">Lachlan Robinson</p>
+            </div>
+            <div>
+                <ul class="grid grid-cols-3 gap-12 justify-center items-center">
+                    <li class="text-center transition-all h-5 w-16 hover:font-bold hover:cursor-pointer">Projects</li>
+                    <li class="text-center transition-all h-5 w-16 hover:font-bold hover:cursor-pointer">About</li>
+                    <li class="text-center transition-all h-5 w-16 hover:font-bold hover:cursor-pointer">Contact</li>
+                </ul>
+            </div>
+        </div>
         <!-- Hero Intro -->
-        <div class="container">
-            <h1 class="title top">LACHLAN</h1>
-            <h1 class="title">ROBINSON</h1>
-            <h3 class="subtitle">Full-Stack Web Developer</h3>
-            <div class="tag-container">
-                <a href="https://github.com/lachlan-robinson" target="_blank">
-                    <span class="social-tag social-icon github">
-                        <span class="icon-inner" id="github-inner">
-                            <i class="fa fa-github"></i>
-                        </span>
-                        <p>Github</p>
-                    </span>
-                </a>
+        <div class="flex flex-col items-center justify-center h-screen">
+            <h1 class="text-9xl font-bold">LACHLAN</h1>
+            <h1 class="text-9xl font-bold">ROBINSON</h1>
+            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10" />
+            <h3 class="text-7xl">Web Developer</h3>
 
-                <a
-                    href="https://www.linkedin.com/in/lachlanrobinson/"
-                    target="_blank"
-                >
-                    <div class="social-tag social-icon linkedin">
-                        <span class="icon-inner" id="linkedin-inner">
-                            <i class="fa fa-linkedin"></i>
-                        </span>
-                        <p>LinkedIn</p>
+            <!-- Tags -->
+            <div class="grid grid-cols-3 gap-2 mt-8 w-10/12 max-w-screen-md">
+                <a href="https://github.com/lachlan-robinson" target="_blank">
+                    <div class="grid grid-cols-3 p-4 m-2 justify-center items-center bg-gray-800 rounded-full border-solid border-2 border-white transition-all shadow-lg hover:bg-gray-900">
+                        <img src="./img/icons/github.svg" class="w-10" />
+                        <p class="text-2xl col-span-2">Github</p>
                     </div>
                 </a>
 
-                <a
-                    href="https://www.instagram.com/lachlanrobinson_/"
-                    target="_blank"
-                >
-                    <div class="social-tag social-icon instagram">
-                        <span class="icon-inner" id="instagram-inner">
-                            <i class="fa fa-instagram"></i>
-                        </span>
-                        <p>Instagram</p>
+                <a href="https://www.linkedin.com/in/lachlanrobinson/" target="_blank">
+                    <div class="grid grid-cols-3 p-4 m-2 justify-center items-center bg-gray-800 rounded-full border-solid border-2 border-white transition-all shadow-lg hover:bg-gray-900">
+                        <img src="./img/icons/linkedin.svg" class="w-10" />
+                        <p class="text-2xl">LinkedIn</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/lachlanrobinson_/" target="_blank">
+                    <div class="grid grid-cols-3 p-4 m-2 justify-center items-center bg-gray-800 rounded-full border-solid border-2 border-white transition-all shadow-lg hover:bg-gray-900">
+                        <img src="./img/icons/instagram.svg" class="w-10" />
+                        <p class="text-2xl">Instagram</p>
                     </div>
                 </a>
             </div>
@@ -61,10 +60,7 @@
             <h2 id="projects-title">Projects</h2>
             <hr />
             <div id="projects">
-                <a
-                    href="https://github.com/lachlan-robinson/portfolio-site"
-                    target="_blank"
-                >
+                <a href="https://github.com/lachlan-robinson/portfolio-site" target="_blank">
                     <div class="project-card project-1">
                         <h3>Portfolio Site</h3>
                         <p>The website you're interacting with now!</p>
